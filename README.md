@@ -1,4 +1,4 @@
-# Custom Cloudformation resource to decrypt secrets in CF templates
+# Custom CF resource to decrypt secrets in CF templates
 
 [![PyPI](https://img.shields.io/pypi/v/humilis-decrypt.svg?style=flat)](https://pypi.python.org/pypi/humilis-decrypt)
 
