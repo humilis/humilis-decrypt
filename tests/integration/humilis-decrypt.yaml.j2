@@ -1,0 +1,18 @@
+---
+humilis-decrypt:
+    description:
+        A dummy environment used for testing the decrypt plugin.
+
+    layers:
+        - layer: decrypt
+          layer_type: decrypt
+          key_admins:
+            - user/german
+            - user/arnaud
+            - user/raam
+            - user/test-travis
+          key_users:
+            - user/german
+            - user/arnaud
+            - user/raam
+            - user/test-travis

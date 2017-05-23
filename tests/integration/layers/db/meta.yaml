@@ -1,0 +1,26 @@
+---
+meta:
+    description:
+        Dummy DB instance to test the decrypt plugin
+
+    parameters:
+        description:
+            description: A description for the layer
+            value:
+
+        decrypt_arn:
+            description:
+                The ARN of the custom CF resource that provides the decryption
+                service
+            value:
+
+        db_username:
+            description:
+                The username
+            value:
+                admin
+
+        db_password:
+            description:
+                The password
+            value:

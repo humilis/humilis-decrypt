@@ -1,0 +1,13 @@
+---
+humilis-db:
+    description:
+        A dummy KMS key used to test the decrypt plugin.
+
+    layers:
+        - layer: db
+          decrypt_arn:
+            $environment_output:
+                environment_name: humilis-decrypt
+                layer_name: decrypt
+                output_name: LambdaFunctionArn
+          db_password: AQICAHh91RgtdSl4b7X/V4HdzV/gWaahpOLi9nDh2MByx1DT3wE66m1LxqK4duN3ioxpbJCAAAAAZjBkBgkqhkiG9w0BBwagVzBVAgEAMFAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM8hyr/zQW6JtFfyD3AgEQgCPRh7m0L8GStZqwkiSGqNaLCiU8CD0ZXJ6m7/NaBY/Kjx0nfw==

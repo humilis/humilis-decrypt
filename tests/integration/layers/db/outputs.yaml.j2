@@ -1,0 +1,15 @@
+---
+outputs:
+    DbEndpointAddress:
+        Description: The address of the DB instance 
+        Value:
+            "Fn::GetAtt":
+                - DbInstance 
+                - Endpoint.Address
+
+    DbEndpointAddress:
+        Description: The port at which the MySQL server is listening 
+        Value:
+            "Fn::GetAtt":
+                - DbInstance 
+                - Endpoint.Address

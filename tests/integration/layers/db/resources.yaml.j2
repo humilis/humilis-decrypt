@@ -1,0 +1,17 @@
+---
+resources:
+  DbPasswordDecrypt:
+    Type: "Custom::KMSDecrypt"
+    Properties:
+      ServiceToken: "{{decrypt_arn}}"
+      Ciphertext: "{{db_password}}"
+  DbInstance:
+    Type: "AWS::RDS::DBInstance"
+    Properties:
+      AllocatedStorage: "20"
+      DBInstanceClass: "db.m1.small"
+      Engine: "MySQL"
+      EngineVersion: "5.5"
+      MasterUsername: "{{db_username}}"
+      MasterUserPassword:
+        Fn::Sub: ${DbPasswordDecrypt.Plaintext}

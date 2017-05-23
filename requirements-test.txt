@@ -1,0 +1,11 @@
+# test requirements
+boto3
+pytest
+pyyaml
+mock
+tox
+
+-e .
+git+https://github.com/humilis/humilis-redshift
+git+https://github.com/humilis/humilis-vpc
+git+https://github.com/humilis/humilis-kms
