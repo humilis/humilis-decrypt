@@ -1,8 +1,14 @@
 ---
 resources:
-    KmsKey: 
+    KmsKeyAlias:
+      Type: "AWS::KMS::Alias"
+      Properties:
+        AliasName: "alias/{{__context.environment.name}}-{{__context.layer.name}}-{{__context.stage}}"
+        TargetKeyId:
+            Ref: KmsKey
+    KmsKey:
       Type: "AWS::KMS::Key"
-      Properties: 
+      Properties:
         Description: "{{description or __context.environment.description}}"
         KeyPolicy:
           Version: "2012-10-17"
